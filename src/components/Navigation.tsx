@@ -26,11 +26,20 @@ const Navigation = () => {
   const menuItems = [
     { label: 'Home', href: 'home' },
     { label: 'About Us', href: 'about' },
+    { label: 'Products', href: '/products', isRoute: true },
     { label: 'Solutions', href: 'solutions' },
     { label: 'Industries', href: 'industries' },
     { label: 'Careers', href: 'careers' },
     { label: 'Contact Us', href: 'contact' },
   ];
+
+  const handleMenuClick = (item: any) => {
+    if (item.isRoute) {
+      window.location.href = item.href;
+    } else {
+      scrollToSection(item.href);
+    }
+  };
 
   return (
     <nav className={`fixed w-full z-50 transition-all duration-300 ${
@@ -52,7 +61,7 @@ const Navigation = () => {
               {menuItems.map((item) => (
                 <button
                   key={item.label}
-                  onClick={() => scrollToSection(item.href)}
+                  onClick={() => handleMenuClick(item)}
                   className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors duration-200 hover:scale-105"
                 >
                   {item.label}
@@ -79,7 +88,7 @@ const Navigation = () => {
               {menuItems.map((item) => (
                 <button
                   key={item.label}
-                  onClick={() => scrollToSection(item.href)}
+                  onClick={() => handleMenuClick(item)}
                   className="text-gray-700 hover:text-blue-600 block px-3 py-2 text-base font-medium w-full text-left transition-colors duration-200"
                 >
                   {item.label}
