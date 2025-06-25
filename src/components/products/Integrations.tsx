@@ -27,13 +27,16 @@ const Integrations = () => {
           {integrations.map((integration, index) => (
             <div 
               key={index} 
-              className="bg-gray-50 rounded-2xl p-8 flex items-center justify-center hover:scale-110 transition-all duration-300 hover:shadow-lg animate-fade-in group"
-              style={{ animationDelay: `${index * 100}ms` }}
+              className="bg-gray-50 rounded-2xl p-8 flex items-center justify-center hover:scale-110 hover:rotate-3 transition-all duration-500 hover:shadow-2xl hover:bg-white animate-fade-in group cursor-pointer"
+              style={{ 
+                animationDelay: `${index * 150}ms`,
+                transformOrigin: 'center'
+              }}
             >
               <img
                 src={integration.logo}
                 alt={integration.name}
-                className="w-20 h-20 object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
+                className="w-20 h-20 object-contain filter grayscale group-hover:grayscale-0 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500"
               />
             </div>
           ))}
