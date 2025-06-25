@@ -6,6 +6,7 @@ import AnimatedFeatures from '@/components/AnimatedFeatures';
 import InteractiveFlow from '@/components/InteractiveFlow';
 import SolutionsSection from '@/components/SolutionsSection';
 import IndustriesSection from '@/components/IndustriesSection';
+import OurClientsSection from '@/components/OurClientsSection';
 import AboutSection from '@/components/AboutSection';
 import CareersSection from '@/components/CareersSection';
 import ContactSection from '@/components/ContactSection';
@@ -20,6 +21,7 @@ const Index = () => {
       <InteractiveFlow />
       <SolutionsSection />
       <IndustriesSection />
+      <OurClientsSection />
       <AboutSection />
       <CareersSection />
       <ContactSection />

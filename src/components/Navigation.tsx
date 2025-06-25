@@ -42,6 +42,7 @@ const Navigation = () => {
     { label: 'Products', href: '/products', isRoute: true },
     { label: 'Solutions', href: 'solutions' },
     { label: 'Industries', href: 'industries' },
+    { label: 'Our Clients', href: 'clients' },
     { label: 'Careers', href: 'careers' },
     { label: 'Contact Us', href: 'contact' },
   ];
