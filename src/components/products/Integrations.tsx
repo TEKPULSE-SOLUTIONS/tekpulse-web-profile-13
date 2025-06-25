@@ -3,12 +3,12 @@ import React from 'react';
 
 const Integrations = () => {
   const integrations = [
-    { name: 'M-Pesa', logo: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=100&q=80' },
-    { name: 'PayPal', logo: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=100&q=80' },
-    { name: 'Slack', logo: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?auto=format&fit=crop&w=100&q=80' },
-    { name: 'Firebase', logo: 'https://images.unsplash.com/photo-1633356122544-f134324a6cee?auto=format&fit=crop&w=100&q=80' },
-    { name: 'Docker', logo: 'https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&w=100&q=80' },
-    { name: 'AWS', logo: 'https://images.unsplash.com/photo-1523474253046-8cd2748b5fd2?auto=format&fit=crop&w=100&q=80' }
+    { name: 'M-Pesa', logo: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=200&q=80' },
+    { name: 'PayPal', logo: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=200&q=80' },
+    { name: 'Slack', logo: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?auto=format&fit=crop&w=200&q=80' },
+    { name: 'Firebase', logo: 'https://images.unsplash.com/photo-1633356122544-f134324a6cee?auto=format&fit=crop&w=200&q=80' },
+    { name: 'Docker', logo: 'https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&w=200&q=80' },
+    { name: 'AWS', logo: 'https://images.unsplash.com/photo-1523474253046-8cd2748b5fd2?auto=format&fit=crop&w=200&q=80' }
   ];
 
   return (
@@ -27,13 +27,13 @@ const Integrations = () => {
           {integrations.map((integration, index) => (
             <div 
               key={index} 
-              className="bg-gray-50 rounded-2xl p-6 flex items-center justify-center hover:scale-110 transition-all duration-300 hover:shadow-lg animate-fade-in group"
+              className="bg-gray-50 rounded-2xl p-8 flex items-center justify-center hover:scale-110 transition-all duration-300 hover:shadow-lg animate-fade-in group"
               style={{ animationDelay: `${index * 100}ms` }}
             >
               <img
                 src={integration.logo}
                 alt={integration.name}
-                className="w-12 h-12 object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
+                className="w-20 h-20 object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
               />
             </div>
           ))}
