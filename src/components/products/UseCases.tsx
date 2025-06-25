@@ -1,6 +1,5 @@
-
 import React from 'react';
-import { Coffee, Wifi, GraduationCap, Building2 } from 'lucide-react';
+import { Coffee, Wifi, GraduationCap, Building2, CheckCircle } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 
 const UseCases = () => {
