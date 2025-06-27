@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useRef } from 'react';
 import { ChevronLeft, ChevronRight, Users, Globe, Shield, TrendingUp, Star, MapPin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -15,18 +14,58 @@ const OurClientsSection = () => {
   });
   const sectionRef = useRef<HTMLDivElement>(null);
 
-  // Client logos data
+  // Client logos data with relevant images
   const clients = [
-    { name: 'Safaricom', logo: '/placeholder.svg', description: 'Leading telecommunications provider' },
-    { name: 'Liquid Telecom', logo: '/placeholder.svg', description: 'Pan-African telecoms group' },
-    { name: 'Ministry of ICT', logo: '/placeholder.svg', description: 'Government technology initiative' },
-    { name: 'NSSF', logo: '/placeholder.svg', description: 'National Social Security Fund' },
-    { name: 'Kenya Power (KPLC)', logo: '/placeholder.svg', description: 'National electricity provider' },
-    { name: 'JKUAT', logo: '/placeholder.svg', description: 'Technical university' },
-    { name: 'Moringa School', logo: '/placeholder.svg', description: 'Coding bootcamp' },
-    { name: 'Equity Bank', logo: '/placeholder.svg', description: 'Leading financial institution' },
-    { name: 'Zuku', logo: '/placeholder.svg', description: 'Cable TV and internet provider' },
-    { name: 'Nairobi Innovation Week', logo: '/placeholder.svg', description: 'Innovation conference' }
+    { 
+      name: 'Safaricom', 
+      logo: 'https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=400&h=200&fit=crop', 
+      description: 'Leading telecommunications provider' 
+    },
+    { 
+      name: 'Liquid Telecom', 
+      logo: 'https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=400&h=200&fit=crop', 
+      description: 'Pan-African telecoms group' 
+    },
+    { 
+      name: 'Ministry of ICT', 
+      logo: 'https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=400&h=200&fit=crop', 
+      description: 'Government technology initiative' 
+    },
+    { 
+      name: 'NSSF', 
+      logo: 'https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=400&h=200&fit=crop', 
+      description: 'National Social Security Fund' 
+    },
+    { 
+      name: 'Kenya Power (KPLC)', 
+      logo: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=400&h=200&fit=crop', 
+      description: 'National electricity provider' 
+    },
+    { 
+      name: 'JKUAT', 
+      logo: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=200&fit=crop', 
+      description: 'Technical university' 
+    },
+    { 
+      name: 'Moringa School', 
+      logo: 'https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=400&h=200&fit=crop', 
+      description: 'Coding bootcamp' 
+    },
+    { 
+      name: 'Equity Bank', 
+      logo: 'https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=400&h=200&fit=crop', 
+      description: 'Leading financial institution' 
+    },
+    { 
+      name: 'Zuku', 
+      logo: 'https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=400&h=200&fit=crop', 
+      description: 'Cable TV and internet provider' 
+    },
+    { 
+      name: 'Nairobi Innovation Week', 
+      logo: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=200&fit=crop', 
+      description: 'Innovation conference' 
+    }
   ];
 
   // Testimonials data
@@ -158,13 +197,21 @@ const OurClientsSection = () => {
                 }`}
                 style={{ transitionDelay: `${400 + index * 100}ms` }}
               >
-                <div className="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 group-hover:scale-105">
-                  <img
-                    src={client.logo}
-                    alt={client.name}
-                    className="w-full h-12 object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
-                  />
-                  {/* Tooltip */}
+                <div className="bg-white rounded-xl p-4 shadow-sm hover:shadow-lg transition-all duration-300 group-hover:scale-105 overflow-hidden">
+                  <div className="relative h-20 mb-3">
+                    <img
+                      src={client.logo}
+                      alt={client.name}
+                      className="w-full h-full object-cover rounded-lg grayscale group-hover:grayscale-0 transition-all duration-300"
+                    />
+                  </div>
+                  <h3 className="text-sm font-semibold text-gray-900 text-center mb-1">
+                    {client.name}
+                  </h3>
+                  <p className="text-xs text-gray-600 text-center">
+                    {client.description}
+                  </p>
+                  {/* Enhanced Tooltip */}
                   <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-gray-900 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap z-10">
                     {client.description}
                     <div className="absolute top-full left-1/2 transform -translate-x-1/2 border-4 border-transparent border-t-gray-900"></div>
