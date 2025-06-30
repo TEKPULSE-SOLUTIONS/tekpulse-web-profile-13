@@ -40,6 +40,7 @@ const Navigation = () => {
     { label: 'Home', href: 'home' },
     { label: 'About Us', href: 'about' },
     { label: 'Products', href: '/products', isRoute: true },
+    { label: 'Projects on Sale', href: '/projects-on-sale', isRoute: true },
     { label: 'Solutions', href: 'solutions' },
     { label: 'Industries', href: 'industries' },
     { label: 'Our Clients', href: 'clients' },
