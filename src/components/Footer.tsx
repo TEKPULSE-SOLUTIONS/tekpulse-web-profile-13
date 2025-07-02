@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Linkedin, Twitter, Facebook, Mail, Phone, MapPin } from 'lucide-react';
 
@@ -13,7 +12,7 @@ const Footer = () => {
   const companyLinks = [
     { label: 'About Us', action: () => scrollToSection('about') },
     { label: 'Careers', action: () => scrollToSection('careers') },
-    { label: 'Blog', action: () => console.log('Navigate to blog') },
+    { label: 'Blog', action: () => window.location.href = '/blog' },
     { label: 'News', action: () => console.log('Navigate to news') }
   ];
 
