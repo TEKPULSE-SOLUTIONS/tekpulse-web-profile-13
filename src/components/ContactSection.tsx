@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { MapPin, Phone, Mail, Send } from 'lucide-react';
+import { MapPin, Phone, Mail, Send, MessageCircle } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 
 const ContactSection = () => {
@@ -14,7 +14,7 @@ const ContactSection = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Here you would typically send the form data to your backend
+    // Here you would typically send the form data to info@tekpulsesolutions.com
     toast({
       title: "Message Sent!",
       description: "Thank you for contacting us. We'll get back to you soon.",
@@ -32,18 +32,39 @@ const ContactSection = () => {
   const contactInfo = [
     {
       icon: MapPin,
-      title: 'Our Office',
-      details: ['123 Innovation Street', 'Tech City, TC 12345', 'United States']
+      title: 'Nairobi Headquarters',
+      details: [
+        '5th Floor, Norwich Union House',
+        'Moi Avenue, Nairobi, Kenya',
+        'P.O. Box 67204-00200, Nairobi'
+      ]
+    },
+    {
+      icon: MapPin,
+      title: 'Kilifi Branch Office',
+      details: [
+        'Tekpulse Complex, Green Estate',
+        'Mombasa-Malindi Road, Mnarani, Kilifi',
+        'P.O. Box 984, 80108 – Kilifi'
+      ]
     },
     {
       icon: Phone,
-      title: 'Phone',
-      details: ['+1 (555) 123-4567', '+1 (555) 987-6543']
+      title: 'Phone Numbers',
+      details: [
+        '+254798653043 (Main)',
+        '+254768300226 (Alternative)',
+        '+254748112233 (Kilifi Branch)'
+      ]
     },
     {
       icon: Mail,
-      title: 'Email',
-      details: ['info@tekpulsesoftwares.com', 'sales@tekpulsesoftwares.com']
+      title: 'Email Addresses',
+      details: [
+        'info@tekpulsesolutions.com',
+        'sales@tekpulsesolutions.com',
+        'kilifi@tekpulsesolutions.com'
+      ]
     }
   ];
 
@@ -140,10 +161,23 @@ const ContactSection = () => {
                 <Send size={20} />
               </button>
             </form>
+
+            {/* WhatsApp Contact */}
+            <div className="mt-6 pt-6 border-t border-gray-200">
+              <a
+                href="https://wa.me/254798653043"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full bg-green-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-green-700 transition-colors duration-300 hover:scale-105 flex items-center justify-center gap-2"
+              >
+                <MessageCircle size={20} />
+                WhatsApp Us
+              </a>
+            </div>
           </div>
 
           {/* Contact Information */}
-          <div className="space-y-8">
+          <div className="space-y-6">
             {contactInfo.map((info, index) => (
               <div key={index} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
                 <div className="flex items-start gap-4">
@@ -164,13 +198,33 @@ const ContactSection = () => {
               </div>
             ))}
             
+            {/* Office Hours */}
+            <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Phone className="h-6 w-6 text-blue-600" />
+                </div>
+                <div>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">
+                    Office Hours
+                  </h4>
+                  <p className="text-gray-600 mb-1">
+                    <strong>Nairobi HQ:</strong> Monday – Friday, 8:00 AM – 5:00 PM
+                  </p>
+                  <p className="text-gray-600">
+                    <strong>Kilifi Branch:</strong> Monday – Friday, 9:00 AM – 4:30 PM
+                  </p>
+                </div>
+              </div>
+            </div>
+            
             {/* Map Placeholder */}
             <div className="bg-white rounded-xl shadow-lg p-2 overflow-hidden">
               <div className="w-full h-64 bg-gray-200 rounded-lg flex items-center justify-center">
                 <div className="text-center">
                   <MapPin className="h-12 w-12 text-gray-400 mx-auto mb-2" />
                   <p className="text-gray-500">Interactive Map</p>
-                  <p className="text-sm text-gray-400">Location View</p>
+                  <p className="text-sm text-gray-400">Nairobi & Kilifi Locations</p>
                 </div>
               </div>
             </div>

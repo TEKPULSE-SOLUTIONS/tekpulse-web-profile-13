@@ -1,5 +1,6 @@
+
 import React from 'react';
-import { Linkedin, Twitter, Facebook, Mail, Phone, MapPin } from 'lucide-react';
+import { Linkedin, Facebook, Instagram, Mail, Phone, MapPin } from 'lucide-react';
 
 const Footer = () => {
   const scrollToSection = (sectionId: string) => {
@@ -31,9 +32,9 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    { icon: Linkedin, label: 'LinkedIn', href: '#' },
-    { icon: Twitter, label: 'Twitter', href: '#' },
-    { icon: Facebook, label: 'Facebook', href: '#' }
+    { icon: Linkedin, label: 'LinkedIn', href: 'https://www.linkedin.com/in/tekpulse-solutions-60aa8a372' },
+    { icon: Facebook, label: 'Facebook', href: '#' },
+    { icon: Instagram, label: 'Instagram', href: '#' }
   ];
 
   return (
@@ -43,7 +44,7 @@ const Footer = () => {
           {/* Company Info */}
           <div className="lg:col-span-1">
             <h3 className="text-2xl font-bold text-blue-400 mb-4">
-              Tekpulse Softwares
+              TEKPULSE SOFTWARES
             </h3>
             <p className="text-gray-300 mb-6 leading-relaxed">
               Transforming businesses through innovative software solutions and 
@@ -51,17 +52,37 @@ const Footer = () => {
             </p>
             
             <div className="space-y-3">
-              <div className="flex items-center gap-3">
-                <MapPin className="h-4 w-4 text-blue-400" />
-                <span className="text-sm text-gray-300">Tech City, TC 12345</span>
+              <div className="flex items-start gap-3">
+                <MapPin className="h-4 w-4 text-blue-400 mt-1" />
+                <div className="text-sm text-gray-300">
+                  <div className="font-semibold mb-1">Nairobi HQ:</div>
+                  <div>5th Floor, Norwich Union House</div>
+                  <div>Moi Avenue, Nairobi, Kenya</div>
+                  <div>P.O. Box 67204-00200</div>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <MapPin className="h-4 w-4 text-blue-400 mt-1" />
+                <div className="text-sm text-gray-300">
+                  <div className="font-semibold mb-1">Kilifi Branch:</div>
+                  <div>Green Estate, Mombasa-Malindi Road</div>
+                  <div>Mnarani, Kilifi</div>
+                  <div>P.O. Box 984, 80108</div>
+                </div>
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="h-4 w-4 text-blue-400" />
-                <span className="text-sm text-gray-300">+1 (555) 123-4567</span>
+                <div className="text-sm text-gray-300">
+                  <div>+254798653043</div>
+                  <div>+254768300226</div>
+                </div>
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="h-4 w-4 text-blue-400" />
-                <span className="text-sm text-gray-300">info@tekpulsesoftwares.com</span>
+                <div className="text-sm text-gray-300">
+                  <div>info@tekpulsesolutions.com</div>
+                  <div>sales@tekpulsesolutions.com</div>
+                </div>
               </div>
             </div>
           </div>
@@ -124,6 +145,8 @@ const Footer = () => {
                   <a
                     key={index}
                     href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="w-8 h-8 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors duration-200"
                     aria-label={social.label}
                   >
@@ -139,7 +162,7 @@ const Footer = () => {
         <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm mb-4 md:mb-0">
-              © 2024 Tekpulse Softwares. All rights reserved.
+              © 2024 TEKPULSE SOFTWARES. All rights reserved.
             </p>
             <div className="flex gap-6">
               <button className="text-gray-400 hover:text-blue-400 transition-colors duration-200 text-sm">

@@ -42,6 +42,7 @@ const Navigation = () => {
     { label: 'Products', href: '/products', isRoute: true },
     { label: 'Projects on Sale', href: '/projects-on-sale', isRoute: true },
     { label: 'Project Request', href: '/project-request', isRoute: true },
+    { label: 'Blog', href: '/blog', isRoute: true },
     { label: 'Solutions', href: 'solutions' },
     { label: 'Industries', href: 'industries' },
     { label: 'Our Clients', href: 'clients' },
@@ -71,7 +72,7 @@ const Navigation = () => {
           <div className="flex-shrink-0">
             <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent cursor-pointer hover:scale-105 transition-transform duration-300"
                 onClick={() => scrollToSection('home')}>
-              Tekpulse Softwares
+              TEKPULSE SOFTWARES
             </h1>
           </div>
 
