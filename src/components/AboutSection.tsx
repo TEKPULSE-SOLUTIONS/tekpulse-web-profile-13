@@ -1,8 +1,11 @@
 
 import React from 'react';
 import { Users, Target, Award, Clock } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const AboutSection = () => {
+  const navigate = useNavigate();
+  
   const stats = [
     { icon: Users, label: 'Expert Team', value: '50+' },
     { icon: Clock, label: 'Years Experience', value: '10+' },
@@ -58,7 +61,10 @@ const AboutSection = () => {
               </div>
             </div>
             
-            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-300 hover:scale-105">
+            <button 
+              onClick={() => navigate('/meet-our-team')}
+              className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-300 hover:scale-105"
+            >
               Meet Our Team
             </button>
           </div>
