@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Linkedin, Facebook, Instagram, Mail, Phone, MapPin } from 'lucide-react';
 
@@ -161,18 +162,18 @@ const Footer = () => {
         <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm mb-4 md:mb-0">
-              © 2024 TEKPULSE SOFTWARES. All rights reserved.
+              © 2025 TEKPULSE SOFTWARES. All rights reserved.
             </p>
             <div className="flex gap-6">
-              <button className="text-gray-400 hover:text-blue-400 transition-colors duration-200 text-sm">
+              <a href="/privacy-policy" className="text-gray-400 hover:text-blue-400 transition-colors duration-200 text-sm">
                 Privacy Policy
-              </button>
-              <button className="text-gray-400 hover:text-blue-400 transition-colors duration-200 text-sm">
+              </a>
+              <a href="/terms-of-service" className="text-gray-400 hover:text-blue-400 transition-colors duration-200 text-sm">
                 Terms of Service
-              </button>
-              <button className="text-gray-400 hover:text-blue-400 transition-colors duration-200 text-sm">
-                Cookies Policy
-              </button>
+              </a>
+              <a href="/cookie-policy" className="text-gray-400 hover:text-blue-400 transition-colors duration-200 text-sm">
+                Cookie Policy
+              </a>
             </div>
           </div>
         </div>

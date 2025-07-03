@@ -84,15 +84,6 @@ const HeroSection = () => {
               alt="Digital Technology Solutions"
               className="relative rounded-2xl shadow-2xl mx-auto max-w-4xl w-full hover:scale-105 transition-all duration-700 hover:shadow-3xl"
             />
-            
-            {/* Floating badges */}
-            <div className="absolute -top-6 -right-6 bg-gradient-to-r from-green-400 to-blue-500 text-white px-6 py-3 rounded-full text-sm font-semibold animate-bounce-gentle shadow-lg">
-              ✨ AI Powered
-            </div>
-            
-            <div className="absolute -bottom-6 -left-6 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-3 rounded-full text-sm font-semibold animate-pulse-glow shadow-lg">
-              🚀 Cloud Ready
-            </div>
           </div>
         </div>
       </div>
