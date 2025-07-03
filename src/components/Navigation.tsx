@@ -43,6 +43,7 @@ const Navigation = () => {
     { label: 'Projects on Sale', href: '/projects-on-sale', isRoute: true },
     { label: 'Project Request', href: '/project-request', isRoute: true },
     { label: 'Blog', href: '/blog', isRoute: true },
+    { label: 'News', href: '/news', isRoute: true },
     { label: 'Solutions', href: 'solutions' },
     { label: 'Industries', href: 'industries' },
     { label: 'Our Clients', href: 'clients' },
@@ -70,7 +71,7 @@ const Navigation = () => {
         <div className="flex justify-between items-center">
           {/* Logo with enhanced animation */}
           <div className="flex-shrink-0">
-            <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent cursor-pointer hover:scale-105 transition-transform duration-300"
+            <h1 className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent cursor-pointer hover:scale-105 transition-transform duration-300"
                 onClick={() => scrollToSection('home')}>
               TEKPULSE SOFTWARES
             </h1>
@@ -78,12 +79,12 @@ const Navigation = () => {
 
           {/* Desktop Menu */}
           <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-8">
+            <div className="ml-10 flex items-baseline space-x-4 xl:space-x-6">
               {menuItems.map((item, index) => (
                 <button
                   key={item.label}
                   onClick={() => handleMenuClick(item)}
-                  className={`relative text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-all duration-300 hover:scale-105 group ${
+                  className={`relative text-gray-700 hover:text-blue-600 px-2 xl:px-3 py-2 text-xs xl:text-sm font-medium transition-all duration-300 hover:scale-105 group ${
                     isScrolled ? 'hover:bg-blue-50 rounded-lg' : ''
                   }`}
                   style={{ animationDelay: `${index * 50}ms` }}
@@ -117,7 +118,7 @@ const Navigation = () => {
               <button
                 key={item.label}
                 onClick={() => handleMenuClick(item)}
-                className={`text-gray-700 hover:text-blue-600 hover:bg-blue-50 block px-3 py-2 text-base font-medium w-full text-left transition-all duration-300 rounded-lg transform ${
+                className={`text-gray-700 hover:text-blue-600 hover:bg-blue-50 block px-3 py-2 text-sm font-medium w-full text-left transition-all duration-300 rounded-lg transform ${
                   isMobileMenuOpen ? 'translate-x-0 opacity-100' : 'translate-x-4 opacity-0'
                 }`}
                 style={{ 

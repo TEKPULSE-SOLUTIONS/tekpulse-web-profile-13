@@ -10,6 +10,8 @@ import ProjectsOnSale from "./pages/ProjectsOnSale";
 import ProjectRequest from "./pages/ProjectRequest";
 import Blog from "./pages/Blog";
 import BlogDetail from "./pages/BlogDetail";
+import News from "./pages/News";
+import NewsArticle from "./pages/NewsArticle";
 import Dashboard from "./pages/Dashboard";
 import MeetOurTeam from "./pages/MeetOurTeam";
 import NotFound from "./pages/NotFound";
@@ -29,6 +31,8 @@ const App = () => (
           <Route path="/project-request" element={<ProjectRequest />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogDetail />} />
+          <Route path="/news" element={<News />} />
+          <Route path="/news/:slug" element={<NewsArticle />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/meet-our-team" element={<MeetOurTeam />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Settings, BarChart3, Workflow, Code } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const SolutionsSection = () => {
   const solutions = [
@@ -8,25 +9,29 @@ const SolutionsSection = () => {
       icon: Settings,
       title: 'Enterprise Resource Planning (ERP)',
       description: 'Comprehensive ERP solutions that streamline business processes and improve operational efficiency.',
-      image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80'
+      image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80',
+      blogSlug: 'ai-software-development'
     },
     {
       icon: BarChart3,
       title: 'Revenue Management Systems',
       description: 'Advanced revenue tracking and management systems to optimize your financial performance.',
-      image: 'https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&w=800&q=80'
+      image: 'https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&w=800&q=80',
+      blogSlug: 'machine-learning-predictive-analytics'
     },
     {
       icon: Workflow,
       title: 'Workflow Automation',
       description: 'Intelligent automation solutions that reduce manual work and increase productivity.',
-      image: 'https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&w=800&q=80'
+      image: 'https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&w=800&q=80',
+      blogSlug: 'ai-software-development'
     },
     {
       icon: Code,
       title: 'Custom Software Development',
       description: 'Tailored software solutions designed specifically for your unique business requirements.',
-      image: 'https://images.unsplash.com/photo-1483058712412-4245e9b90334?auto=format&fit=crop&w=800&q=80'
+      image: 'https://images.unsplash.com/photo-1483058712412-4245e9b90334?auto=format&fit=crop&w=800&q=80',
+      blogSlug: 'blockchain-cybersecurity'
     }
   ];
 
@@ -35,7 +40,7 @@ const SolutionsSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-            Our Solutions
+            Built for Modern Businesses
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Comprehensive software solutions designed to transform your business operations and drive digital innovation.
@@ -69,9 +74,12 @@ const SolutionsSection = () => {
                   {solution.description}
                 </p>
                 
-                <button className="text-blue-600 font-semibold hover:text-blue-700 transition-colors duration-200 group-hover:translate-x-2 transform transition-transform inline-flex items-center gap-1">
+                <Link 
+                  to={`/blog/${solution.blogSlug}`}
+                  className="text-blue-600 font-semibold hover:text-blue-700 transition-colors duration-200 group-hover:translate-x-2 transform transition-transform inline-flex items-center gap-1"
+                >
                   Learn More →
-                </button>
+                </Link>
               </div>
             </div>
           ))}
