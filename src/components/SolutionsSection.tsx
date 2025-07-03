@@ -48,9 +48,9 @@ const SolutionsSection = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {solutions.map((solution, index) => (
+          {solutions.map((solution) => (
             <div
-              key={index}
+              key={solution.title}
               className="group bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden hover:scale-105"
             >
               <div className="relative h-48 overflow-hidden">
