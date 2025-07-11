@@ -65,6 +65,61 @@ const newsArticles = [
     date: new Date(Date.now() - 259200000).toLocaleDateString(),
     image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&q=80",
     featured: false
+  },
+  {
+    id: 5,
+    title: "TekPulse Solutions Expands to North American Market",
+    slug: "north-america-expansion",
+    summary: "We are excited to announce our expansion into the North American market with our new Boston office.",
+    content: "Full content about North America expansion...",
+    category: "Company News",
+    date: new Date(Date.now() - 345600000).toLocaleDateString(),
+    image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&w=800&q=80",
+    featured: false
+  },
+  {
+    id: 6,
+    title: "Cybersecurity Workshop Series Launched",
+    slug: "cybersecurity-workshop-series",
+    summary: "Join our comprehensive cybersecurity workshop series designed for businesses of all sizes.",
+    content: "Full content about cybersecurity workshops...",
+    category: "Event",
+    date: new Date(Date.now() - 432000000).toLocaleDateString(),
+    image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80",
+    featured: false
+  },
+  {
+    id: 7,
+    title: "New Cloud Infrastructure Services Available",
+    slug: "cloud-infrastructure-services",
+    summary: "Announcing our new suite of cloud infrastructure services including managed hosting and disaster recovery.",
+    content: "Full content about cloud services...",
+    category: "Product Launch",
+    date: new Date(Date.now() - 518400000).toLocaleDateString(),
+    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
+    featured: false
+  },
+  {
+    id: 8,
+    title: "TekPulse Solutions Wins Tech Innovation Award",
+    slug: "tech-innovation-award",
+    summary: "We are honored to receive the Tech Innovation Award for our contributions to enterprise software development.",
+    content: "Full content about the award...",
+    category: "Company News",
+    date: new Date(Date.now() - 604800000).toLocaleDateString(),
+    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80",
+    featured: false
+  },
+  {
+    id: 9,
+    title: "Machine Learning in Healthcare: A Partnership Success",
+    slug: "ml-healthcare-partnership",
+    summary: "Our collaboration with healthcare providers demonstrates the power of AI in improving patient outcomes.",
+    content: "Full content about healthcare partnership...",
+    category: "Partnership",
+    date: new Date(Date.now() - 691200000).toLocaleDateString(),
+    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?auto=format&fit=crop&w=800&q=80",
+    featured: false
   }
 ];
 

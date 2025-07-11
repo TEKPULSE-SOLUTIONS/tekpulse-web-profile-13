@@ -55,6 +55,46 @@ const blogPosts = [
     date: new Date(Date.now() - 432000000).toLocaleDateString(),
     description: "A comprehensive guide to building smart contracts and decentralized applications on blockchain platforms like Ethereum and Solana.",
     category: "Blockchain"
+  },
+  {
+    id: 7,
+    title: "Cloud Computing and Serverless Architecture",
+    slug: "cloud-serverless-architecture",
+    date: new Date(Date.now() - 518400000).toLocaleDateString(),
+    description: "Exploring the benefits of serverless computing, microservices architecture, and cloud-native application development.",
+    category: "Cloud Computing"
+  },
+  {
+    id: 8,
+    title: "IoT Security: Protecting Connected Devices",
+    slug: "iot-security-connected-devices",
+    date: new Date(Date.now() - 604800000).toLocaleDateString(),
+    description: "Understanding the unique security challenges of Internet of Things devices and implementing robust protection strategies.",
+    category: "Cybersecurity & IoT"
+  },
+  {
+    id: 9,
+    title: "Natural Language Processing in Business Applications",
+    slug: "nlp-business-applications",
+    date: new Date(Date.now() - 691200000).toLocaleDateString(),
+    description: "How NLP technologies are transforming customer service, content analysis, and automated communication systems.",
+    category: "AI & NLP"
+  },
+  {
+    id: 10,
+    title: "DevOps and CI/CD Pipeline Automation",
+    slug: "devops-cicd-automation",
+    date: new Date(Date.now() - 777600000).toLocaleDateString(),
+    description: "Best practices for implementing continuous integration and deployment pipelines to accelerate software development.",
+    category: "DevOps"
+  },
+  {
+    id: 11,
+    title: "Quantum Computing: The Next Frontier",
+    slug: "quantum-computing-frontier",
+    date: new Date(Date.now() - 864000000).toLocaleDateString(),
+    description: "Exploring quantum computing principles, current capabilities, and potential applications in solving complex computational problems.",
+    category: "Quantum Computing"
   }
 ];
 
