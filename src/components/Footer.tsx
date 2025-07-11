@@ -70,11 +70,21 @@ const Footer = () => {
                   <div>P.O. Box 984, 80108</div>
                 </div>
               </div>
+              <div className="flex items-start gap-3">
+                <MapPin className="h-4 w-4 text-blue-400 mt-1" />
+                <div className="text-sm text-gray-300">
+                  <div className="font-semibold mb-1">USA Office:</div>
+                  <div>745 Atlantic Avenue, 8th Floor</div>
+                  <div>Boston, MA 02111</div>
+                  <div>United States</div>
+                </div>
+              </div>
               <div className="flex items-center gap-3">
                 <Phone className="h-4 w-4 text-blue-400" />
                 <div className="text-sm text-gray-300">
                   <div>+254798653043</div>
                   <div>+254768300226</div>
+                  <div>+1 (617) 555-0148</div>
                 </div>
               </div>
               <div className="flex items-center gap-3">
@@ -82,6 +92,7 @@ const Footer = () => {
                 <div className="text-sm text-gray-300">
                   <div>info@tekpulsesolutions.com</div>
                   <div>sales@tekpulsesolutions.com</div>
+                  <div>usa@tekpulsesolutions.com</div>
                 </div>
               </div>
             </div>

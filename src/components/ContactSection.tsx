@@ -49,12 +49,22 @@ const ContactSection = () => {
       ]
     },
     {
+      icon: MapPin,
+      title: 'USA Office',
+      details: [
+        '745 Atlantic Avenue, 8th Floor',
+        'Boston, MA 02111',
+        'United States'
+      ]
+    },
+    {
       icon: Phone,
       title: 'Phone Numbers',
       details: [
         '+254798653043 (Main)',
         '+254768300226 (Alternative)',
-        '+254748112233 (Kilifi Branch)'
+        '+254748112233 (Kilifi Branch)',
+        '+1 (617) 555-0148 (USA Office)'
       ]
     },
     {
@@ -63,7 +73,8 @@ const ContactSection = () => {
       details: [
         'info@tekpulsesolutions.com',
         'sales@tekpulsesolutions.com',
-        'kilifi@tekpulsesolutions.com'
+        'kilifi@tekpulsesolutions.com',
+        'usa@tekpulsesolutions.com'
       ]
     }
   ];
@@ -211,8 +222,11 @@ const ContactSection = () => {
                   <p className="text-gray-600 mb-1">
                     <strong>Nairobi HQ:</strong> Monday – Friday, 8:00 AM – 5:00 PM
                   </p>
-                  <p className="text-gray-600">
+                  <p className="text-gray-600 mb-1">
                     <strong>Kilifi Branch:</strong> Monday – Friday, 9:00 AM – 4:30 PM
+                  </p>
+                  <p className="text-gray-600">
+                    <strong>USA Office:</strong> Monday – Friday, 9:00 AM – 5:00 PM EST
                   </p>
                 </div>
               </div>
@@ -224,7 +238,7 @@ const ContactSection = () => {
                 <div className="text-center">
                   <MapPin className="h-12 w-12 text-gray-400 mx-auto mb-2" />
                   <p className="text-gray-500">Interactive Map</p>
-                  <p className="text-sm text-gray-400">Nairobi & Kilifi Locations</p>
+                  <p className="text-sm text-gray-400">Nairobi, Kilifi & Boston Locations</p>
                 </div>
               </div>
             </div>
