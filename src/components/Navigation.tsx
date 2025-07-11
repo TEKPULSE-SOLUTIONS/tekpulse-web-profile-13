@@ -67,24 +67,25 @@ const Navigation = () => {
         ? 'bg-white/80 backdrop-blur-lg shadow-lg py-2 border-b border-white/20' 
         : 'bg-white/95 backdrop-blur-sm py-4'
     }`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-6 xl:px-8">
         <div className="flex justify-between items-center">
           {/* Logo with enhanced animation */}
-          <div className="flex-shrink-0">
-            <h1 className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent cursor-pointer hover:scale-105 transition-transform duration-300"
+          <div className="flex-shrink-0 min-w-0">
+            <h1 className="text-lg sm:text-xl lg:text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent cursor-pointer hover:scale-105 transition-transform duration-300 truncate"
                 onClick={() => scrollToSection('home')}>
-              TEKPULSE SOFTWARES
+              <span className="hidden sm:inline">TEKPULSE SOFTWARES</span>
+              <span className="sm:hidden">TEKPULSE</span>
             </h1>
           </div>
 
           {/* Desktop Menu */}
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-4 xl:space-x-6">
+          <div className="hidden lg:block">
+            <div className="ml-6 flex items-baseline space-x-1 xl:space-x-3 2xl:space-x-4">
               {menuItems.map((item, index) => (
                 <button
                   key={item.label}
                   onClick={() => handleMenuClick(item)}
-                  className={`relative text-gray-700 hover:text-blue-600 px-2 xl:px-3 py-2 text-xs xl:text-sm font-medium transition-all duration-300 hover:scale-105 group ${
+                  className={`relative text-gray-700 hover:text-blue-600 px-1.5 xl:px-2 2xl:px-3 py-2 text-xs xl:text-sm 2xl:text-base font-medium transition-all duration-300 hover:scale-105 group whitespace-nowrap ${
                     isScrolled ? 'hover:bg-blue-50 rounded-lg' : ''
                   }`}
                   style={{ animationDelay: `${index * 50}ms` }}
@@ -96,7 +97,42 @@ const Navigation = () => {
             </div>
           </div>
 
+          {/* Tablet Menu - Simplified for medium screens */}
+          <div className="hidden md:block lg:hidden">
+            <div className="ml-4 flex items-baseline space-x-1">
+              {menuItems.slice(0, 6).map((item, index) => (
+                <button
+                  key={item.label}
+                  onClick={() => handleMenuClick(item)}
+                  className={`relative text-gray-700 hover:text-blue-600 px-1.5 py-2 text-xs font-medium transition-all duration-300 hover:scale-105 group whitespace-nowrap ${
+                    isScrolled ? 'hover:bg-blue-50 rounded-lg' : ''
+                  }`}
+                  style={{ animationDelay: `${index * 50}ms` }}
+                >
+                  {item.label}
+                  <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+                </button>
+              ))}
+              <button
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                className="text-gray-700 hover:text-blue-600 px-2 py-2 text-xs font-medium transition-all duration-300 hover:scale-105"
+              >
+                More
+              </button>
+            </div>
+          </div>
+
           {/* Mobile menu button */}
+          <div className="md:block lg:hidden">
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="text-gray-700 hover:text-blue-600 p-2 rounded-lg hover:bg-blue-50 transition-all duration-300"
+            >
+              {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
+            </button>
+          </div>
+
+          {/* Mobile menu button - Mobile only */}
           <div className="md:hidden">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -107,13 +143,13 @@ const Navigation = () => {
           </div>
         </div>
 
-        {/* Mobile Menu with enhanced animation */}
-        <div className={`md:hidden transition-all duration-300 ease-in-out ${
+        {/* Mobile/Tablet Menu with enhanced animation */}
+        <div className={`lg:hidden transition-all duration-300 ease-in-out ${
           isMobileMenuOpen 
             ? 'max-h-96 opacity-100 translate-y-0' 
             : 'max-h-0 opacity-0 -translate-y-4'
-        } overflow-hidden`}>
-          <div className="px-2 pt-2 pb-3 space-y-1 bg-white/90 backdrop-blur-lg rounded-lg shadow-lg mt-4 border border-white/20">
+          } overflow-hidden`}>
+          <div className="px-2 pt-2 pb-3 space-y-1 bg-white/95 backdrop-blur-lg rounded-lg shadow-xl mt-4 border border-white/30 max-h-80 overflow-y-auto">
             {menuItems.map((item, index) => (
               <button
                 key={item.label}
