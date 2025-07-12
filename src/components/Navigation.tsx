@@ -55,7 +55,16 @@ const Navigation = () => {
     if (item.isRoute) {
       window.location.href = item.href;
     } else {
-      scrollToSection(item.href);
+      // For section-based navigation, check if we're on homepage
+      const isOnHomepage = window.location.pathname === '/';
+      
+      if (isOnHomepage) {
+        // We're on homepage, just scroll to section
+        scrollToSection(item.href);
+      } else {
+        // We're on a different page, navigate to homepage with hash
+        window.location.href = `/#${item.href}`;
+      }
     }
   };
 
@@ -72,7 +81,7 @@ const Navigation = () => {
           {/* Logo with enhanced animation */}
           <div className="flex-shrink-0 min-w-0">
             <h1 className="text-lg sm:text-xl lg:text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent cursor-pointer hover:scale-105 transition-transform duration-300 truncate"
-                onClick={() => scrollToSection('home')}>
+                onClick={() => handleMenuClick({ href: 'home', label: 'Home' })}>
               <span className="hidden sm:inline">TEKPULSE SOFTWARES</span>
               <span className="sm:hidden">TEKPULSE</span>
             </h1>
