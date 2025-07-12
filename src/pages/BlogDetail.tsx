@@ -98,6 +98,81 @@ const blogPosts = [
       "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
       "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
     ]
+  },
+  {
+    id: 7,
+    title: "Cloud Computing and Serverless Architecture",
+    slug: "cloud-serverless-architecture",
+    date: new Date(Date.now() - 518400000).toLocaleDateString(),
+    description: "Exploring the benefits of serverless computing, microservices architecture, and cloud-native application development.",
+    category: "Cloud Computing",
+    readTime: "7 min read",
+    author: "David Park",
+    heroImage: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80",
+    sectionImages: [
+      "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+    ]
+  },
+  {
+    id: 8,
+    title: "IoT Security: Protecting Connected Devices",
+    slug: "iot-security-connected-devices",
+    date: new Date(Date.now() - 604800000).toLocaleDateString(),
+    description: "Understanding the unique security challenges of Internet of Things devices and implementing robust protection strategies.",
+    category: "Cybersecurity & IoT",
+    readTime: "9 min read",
+    author: "Rachel Green",
+    heroImage: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80",
+    sectionImages: [
+      "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+    ]
+  },
+  {
+    id: 9,
+    title: "Natural Language Processing in Business Applications",
+    slug: "nlp-business-applications",
+    date: new Date(Date.now() - 691200000).toLocaleDateString(),
+    description: "How NLP technologies are transforming customer service, content analysis, and automated communication systems.",
+    category: "AI & NLP",
+    readTime: "8 min read",
+    author: "Dr. Maria Santos",
+    heroImage: "https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80",
+    sectionImages: [
+      "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+    ]
+  },
+  {
+    id: 10,
+    title: "DevOps and CI/CD Pipeline Automation",
+    slug: "devops-cicd-automation",
+    date: new Date(Date.now() - 777600000).toLocaleDateString(),
+    description: "Best practices for implementing continuous integration and deployment pipelines to accelerate software development.",
+    category: "DevOps",
+    readTime: "10 min read",
+    author: "Tom Wilson",
+    heroImage: "https://images.unsplash.com/photo-1618477388954-7852f32655ec?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80",
+    sectionImages: [
+      "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+    ]
+  },
+  {
+    id: 11,
+    title: "Quantum Computing: The Next Frontier",
+    slug: "quantum-computing-frontier",
+    date: new Date(Date.now() - 864000000).toLocaleDateString(),
+    description: "Exploring quantum computing principles, current capabilities, and potential applications in solving complex computational problems.",
+    category: "Quantum Computing",
+    readTime: "12 min read",
+    author: "Dr. Alan Turing",
+    heroImage: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80",
+    sectionImages: [
+      "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+    ]
   }
 ];
 
